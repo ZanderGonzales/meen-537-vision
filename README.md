@@ -1,0 +1,1 @@
+The goal is to take photos with transformation matrices known between camera angles, and get 3D data from combining those photos
