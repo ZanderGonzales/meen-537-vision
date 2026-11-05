@@ -49,3 +49,4 @@ markdown-pdf.css
 *.toc
 *.vrb
 *.xdv
+ignoretest.tmp
