@@ -1,6 +1,6 @@
 # MeEn537 Final Project Proposal
 
-**Authors:** Zander Gonzalez & Brock Gregersen  
+**Authors:** Zander Gonzales & Brock Gregersen  
 **Instructor:** Dr. Killpack  
 **Date:** 6 November 2026
 
