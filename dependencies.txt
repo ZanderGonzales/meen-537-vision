@@ -1,0 +1,7 @@
+# Python packages used directly by the image-capture script.
+#
+# ROS packages (rospy, cv_bridge, sensor_msgs, and baxter_interface) are
+# provided by the Baxter ROS/Docker workspace and are intentionally not listed
+# here because they are not installed reliably with pip.
+numpy>=1.23,<3
+opencv-python>=4.8,<5
