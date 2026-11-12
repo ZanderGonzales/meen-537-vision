@@ -43,7 +43,7 @@ Docker image or a matching Ubuntu/ROS host.
 4. Run the capture script:
 
    ```bash
-   python scripts/capture_right_camera.py
+   python scripts/robot/capture_right_camera.py
    ```
 
    Each run gets a timestamped subdirectory under
@@ -60,17 +60,36 @@ stationary before collecting data.
 
 ### Python dependencies
 
-The pip-installable dependencies are listed in
-[`dependencies.txt`](./dependencies.txt). Install them inside the Docker
-container, after sourcing the ROS workspace:
+The local pip-installable dependencies are listed in
+[`dependencies.txt`](./dependencies.txt). Install them in the local virtual
+environment:
 
 ```bash
+source .venv/bin/activate
 python -m pip install -r dependencies.txt
 ```
 
 Do not install `rospy`, `cv_bridge`, `sensor_msgs`, or `baxter_interface` with
 pip. Those packages are supplied by the ROS/Baxter workspace and must remain
 compatible with the container's ROS distribution.
+
+### Project structure
+
+```text
+scripts/robot/   Baxter/ROS capture programs
+scripts/local/   Local command-line workflows
+src/meen_vision/ Reusable local computer-vision code
+data/            Local captures and generated results (ignored by Git)
+```
+
+Install the local package in the virtual environment before running local
+scripts:
+
+```bash
+python -m pip install -e .
+python scripts/local/calibrate_camera.py data/calibration/raw \
+  --columns 9 --rows 6 --square-size-m 0.025
+```
 ## Goal
 The goal is to take photos with transformation matrices known between camera angles, and get 3D data from combining those photos
 
