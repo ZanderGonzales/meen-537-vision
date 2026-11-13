@@ -25,6 +25,11 @@ The ROS packages used by this script (including ``rospy``, ``cv_bridge``,
 ``sensor_msgs``, and ``baxter_interface``) must be provided by the compatible
 Baxter ROS workspace. They should not be installed only in a standalone
 Python virtual environment.
+    position = pose["position"]
+    orientation = pose["orientation"]
+    image_file = "image_{:04d}.png".format(sample_number)
+    image_path = os.path.join(directory, image_file)
+    if not cv2.imwrite(image_path
 """
 
 from __future__ import print_function
