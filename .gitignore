@@ -21,7 +21,7 @@ ENV/
 .ruff_cache/
 .coverage
 htmlcov/
-data/
+
 
 # Local Markdown PDF typography stylesheet
 markdown-pdf.css
