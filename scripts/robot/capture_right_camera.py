@@ -44,6 +44,8 @@ import baxter_interface
 
 
 CAMERA_NAME = "right_hand_camera"
+# Baxter's right-hand camera supports resolutions up to 1280x800.
+MAX_CAMERA_RESOLUTION = (1280, 800)
 IMAGE_TOPIC = "/cameras/{}/image".format(CAMERA_NAME)
 CSV_FIELDS = [
     "sample",
@@ -161,6 +163,7 @@ def main():
     limb = baxter_interface.Limb("right")
     camera = baxter_interface.CameraController(CAMERA_NAME)
     camera.open()
+    camera.resolution = MAX_CAMERA_RESOLUTION
 
     try:
         with open(csv_path, "w") as csv_file:
