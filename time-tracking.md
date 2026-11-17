@@ -14,6 +14,6 @@
 | 2026-11-06 | CV Research | 1hr |
 | 2026-11-12 | Project Structure, initial camera script | 1hr |
 | 2026-11-12 | Image Capture | 1.5hr |
-| 2026-11- | | |
+| 2026-11-17 | Undistortion | 1.5hr |
 | 2026-11- | | |
 | 2026-11- | | |
